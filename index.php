@@ -1,5 +1,6 @@
 <?php
-
+	date_default_timezone_set('America/New_York');
+	$current_time = date("g:ia");
 ?>
 
 <!doctype html>
@@ -8,9 +9,9 @@
 <head>
   <meta charset="utf-8">
 
-  <title>The HTML5 Herald</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
+  <title>The Clock Exercise</title>
+  <meta name="description" content="Bill's Clock Exercise">
+  <meta name="author" content="Bill Brikiatis">
 
   <link rel="stylesheet" href="css/styles.css?v=1.0">
 
@@ -20,6 +21,5 @@
 </head>
 
 <body>
-  <script src="js/scripts.js"></script>
-</body>
+  <?php echo $current_time; ?></body>
 </html>
