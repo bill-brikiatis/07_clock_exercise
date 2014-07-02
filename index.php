@@ -1,9 +1,18 @@
 <?php
 	$time_zone = 'America/New_York';
 	date_default_timezone_set($time_zone);
+	
+
+	$script_tz = date_default_timezone_get();
+
+	if (strcmp($script_tz, ini_get('date.timezone'))){
+    	echo 'Script timezone differs from ini-set timezone.';
+	} else {
+    	echo 'Script timezone and ini-set timezone match.';
+	}
+	
 	$current_time = date("g:ia");
 	$military_time = date("G");
-	$military_time = 23; /* test */
 	if ($military_time >= 5 && $military_time < 11) {
 		$class="morning";
 	}
